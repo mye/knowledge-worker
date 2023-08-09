@@ -1,0 +1,22 @@
+[project]
+name = "infocal"
+version = "0.0.1"
+authors = [
+  { name="Lorenz Köhl", email="lo@lrz.me" },
+]
+description = "Put your information in focus"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mye/infocal"
+"Bug Tracker" = "https://github.com/mye/infocal/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
