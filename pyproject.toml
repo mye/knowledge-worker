@@ -12,11 +12,21 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "click", "sqlite-utils"
+]
+
+[project.scripts]
+log-whisper = "infocal.voicelog.cli:cli"
+
 
 [project.urls]
 "Homepage" = "https://github.com/mye/infocal"
 "Bug Tracker" = "https://github.com/mye/infocal/issues"
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --doctest-report ndiff"
+doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS"
